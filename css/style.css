@@ -350,3 +350,32 @@ footer p {
     box-sizing: border-box;
   }
 }
+
+/* ===== 📱 スマホ用フローティング申請ボタン ===== */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 0.9em 1.3em;
+  border-radius: 50px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  font-size: 1em;
+  z-index: 1000;
+  display: none; /* デフォルト非表示（PCでは出さない） */
+}
+
+/* ホバー効果（PCで見るときもきれい） */
+.floating-button:hover {
+  background-color: #0056b3;
+}
+
+/* 📱 スマホ専用で表示 */
+@media (max-width: 768px) {
+  .floating-button {
+    display: inline-block;
+  }
+}
